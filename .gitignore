@@ -1,0 +1,15 @@
+.DS_Store
+.env
+.github/
+.ruff_cache
+/staticfiles/
+__pycache__/
+*.py[cod]
+cloudinary_python.txt
+core.Microsoft*
+core.mongo*
+core.python*
+db.sqlite3
+env.py
+node_modules/
+.venv

@@ -13,3 +13,5 @@ db.sqlite3
 env.py
 node_modules/
 .venv
+./venv
+.venv/

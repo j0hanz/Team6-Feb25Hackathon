@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'home',
     'profiles',
     'about',
@@ -47,6 +49,9 @@ SITE_ID = 1
 # Redirects after login/logout to the homepage "/"
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+# Disable email verification
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Django Crispy Forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
@@ -87,7 +92,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.request',
             ],
         },
     },
@@ -121,6 +125,8 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+AUTH_USER_MODEL = 'profiles.UserProfile'
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [

@@ -57,8 +57,18 @@
             <ul class="navbar-nav me-auto mb-0">
               <li class="nav-item">
                 <a class="nav-link"
-                   href="#"
+                   href="{% url 'home' %}"
                    title="Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                   href="{% url 'about' %}"
+                   title="About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                   href="{% url 'profile' %}"
+                   title="Profile">Profile</a>
               </li>
             </ul>
           </div>

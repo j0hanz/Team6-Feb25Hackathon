@@ -46,8 +46,68 @@ The p
 ### Users
 In order to fully understand our users needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and here are the personas we used:
 
-- Persona 1: "Em
+Persona 1: Alex, The Open-Minded Explorer
+Age: 28 <br>Gender: Non-binary <br>Location: New York City, USA <br>Education: Bachelor's degree in Communications <br>Occupation: Freelance Graphic Designer
 
+More info:
+<details>
+Personality Traits:
+- Open-minded and adventurous
+- Values diversity and inclusivity
+- Enjoys meeting new people and exploring different cultures
+
+Goals:
+- Find a partner who shares their passion for adventure and inclusivity
+- Connect with people from diverse backgrounds and experiences
+
+Pain Points:
+- Difficulty finding inclusive dating platforms
+- Concerns about privacy and safety on dating apps
+
+Quote: "I want to find someone who is as open-minded and adventurous as I am, and who values diversity as much as I do."
+</details>
+
+Persona 2: Jamie, The Supportive Friend
+Age: 35 <br>Gender: Female <br>Location: London, UK <br>Education: Master's degree in Psychology <br>Occupation: Clinical Psychologist
+
+More info:
+<details>
+Personality Traits:
+- Empathetic and supportive
+- Values deep, meaningful connections
+- Enjoys helping others and providing emotional support
+
+Goals:
+- Find a partner who is emotionally supportive and understanding
+- Build a strong, long-lasting relationship
+
+Pain Points:
+- Difficulty finding partners who prioritize emotional support
+- Concerns about meeting genuine people on dating apps
+
+Quote: "I want to find someone who is emotionally supportive and understands the importance of mental health."
+</details>
+
+Persona 3: Taylor, The Creative Soul
+Age: 24 <br>Gender: Male <br>Location: Los Angeles, USA <br>Education: Bachelor's degree in Fine Arts <br>Occupation: Aspiring Musician
+
+More info:
+<details>
+Personality Traits:
+- Creative and expressive
+- Values artistic and intellectual connections
+- Enjoys exploring new ideas and experiences
+
+Goals:
+- Find a partner who shares their passion for creativity and art
+- Connect with someone who appreciates their artistic pursuits
+
+Pain Points:
+- Difficulty finding partners who understand and support their creative endeavors
+- Concerns about finding genuine connections on dating apps
+
+Quote: "I want to find someone who appreciates my creativity and supports my artistic journey."
+</details>
 
 
 [Back to top](#top)

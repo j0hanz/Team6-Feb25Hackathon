@@ -5,7 +5,9 @@ from .forms import UserProfileChangeForm
 
 def profile_page(request):
     if request.method == 'POST':
-        form = UserProfileChangeForm(request.POST, instance=request.user)
+        form = UserProfileChangeForm(
+            request.POST, request.FILES, instance=request.user
+        )
         if form.is_valid():
             form.save()
     else:

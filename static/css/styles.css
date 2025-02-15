@@ -2,3 +2,13 @@ body {
     background-color: rgba(0, 0, 0, 0.596);
     color: rgba(255, 255, 255, 0.884);
 }
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark {
+    background-color: #000000;
+    color: #ffffff;
+}

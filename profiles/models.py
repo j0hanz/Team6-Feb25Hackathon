@@ -37,7 +37,13 @@ class UserProfile(AbstractUser):
         ('dyslexie', 'Dyslexie'),
     ]
 
-    profile_image = CloudinaryField('Profile Image', null=True, blank=True)
+    profile_picture = CloudinaryField(
+        'image',
+        default='nobody_nrbk5n',
+        blank=True,
+        null=True,
+        help_text='Upload a profile picture',
+    )
     gender = models.CharField(max_length=2, choices=GENDER_CHOICES, blank=True)
     sexual_orientation = models.CharField(
         max_length=2, choices=SEXUAL_ORIENTATION_CHOICES, blank=True

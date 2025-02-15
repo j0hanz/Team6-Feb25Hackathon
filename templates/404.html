@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+  <div class="container d-flex pt-5">
+    <div class="row justify-content-center align-self-center w-100">
+      <div class="col-6 text-center">
+        <h2 class="my-4">
+          Oops! We can't find the page you're looking for.
+        </h2>
+        <div class="my-4">
+          It looks like nothing was found at this location. You can go back to the homepage by clicking the button below.
+        </div>
+        <a class="btn btn-custom-text"
+           href="{% url 'home' %}">
+          Return to Home <i class="ms-2 fa-solid fa-rotate-left"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

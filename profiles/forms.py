@@ -42,4 +42,5 @@ class UserProfileChangeForm(UserChangeForm):
             'age': forms.NumberInput(attrs={'placeholder': 'Age'}),
             'about': forms.Textarea(attrs={'placeholder': 'About'}),
             'interests': forms.Textarea(attrs={'placeholder': 'Interests'}),
+            'font_family': forms.Select(attrs={'id': 'font-family-selector'}),
         }

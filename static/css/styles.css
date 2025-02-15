@@ -12,3 +12,19 @@ body.dark {
     background-color: #000000;
     color: #ffffff;
 }
+
+body.default {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body.serif {
+    font-family: 'Times New Roman', serif;
+}
+
+body.sans-serif {
+    font-family: 'Arial', sans-serif;
+}
+
+body.dyslexie {
+    font-family: 'Dyslexie', sans-serif;
+}

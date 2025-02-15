@@ -14,17 +14,17 @@ body.dark {
 }
 
 body.default {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body.serif {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body.sans-serif {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', Helvetica, sans-serif;
 }
 
 body.dyslexie {
-    font-family: 'Dyslexie', sans-serif;
+    font-family: "Lexend", serif;
 }

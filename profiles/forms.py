@@ -10,6 +10,7 @@ class UserProfileCreationForm(UserCreationForm):
         fields = (
             'username',
             'email',
+            'profile_picture',
             'gender',
             'sexual_orientation',
             'age',
@@ -26,7 +27,7 @@ class UserProfileChangeForm(UserChangeForm):
         fields = (
             'username',
             'email',
-            'profile_image',
+            'profile_picture',
             'gender',
             'sexual_orientation',
             'age',

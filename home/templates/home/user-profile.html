@@ -41,7 +41,7 @@
       {% for image in profile.gallery_images.all %}
         <div class="col-md-4 mb-4">
           <img src="{{ image.image.url }}"
-               class="img-fluid img-thumbnail"
+               class="img-fluid rounded"
                alt="Gallery Image" />
         </div>
       {% endfor %}

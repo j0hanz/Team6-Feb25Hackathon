@@ -1,128 +1,129 @@
+/* General body styles */
 body {
-    background-color: rgba(139, 212, 255, 0.856);
-    color: rgba(255, 255, 255, 0.884);
+  background-color: rgba(139, 212, 255, 0.856);
+  color: rgba(255, 255, 255, 0.884);
 }
 
-/* about page style */
-/* about text align */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.default {
+  font-family: "Inter", sans-serif;
+}
+
+body.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body.sans-serif {
+  font-family: "Arial", Helvetica, sans-serif;
+}
+
+body.dyslexie {
+  font-family: "Lexend", serif;
+}
+
+/* About page styles */
 .hero {
-    position: relative;
-    text-align: center;
-    color: rgb(21, 76, 255);
+  position: relative;
+  text-align: center;
+  color: rgb(21, 76, 255);
 }
 
-/* about image style */
 .hero-image {
-    width: 70%;
-    padding-bottom: 50px;
+  width: 70%;
+  padding-bottom: 50px;
 }
 
-/* about text style */
 .hero-text {
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-    border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-/* profile page style */
+/* Profile page styles */
 .profile-container {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-/* profile image style */
 .image-upload-row {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-/* profile forms style */
 .profile-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-form label {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .profile-form input,
 .profile-form textarea {
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 300px;
-    padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
 }
 
 .profile-form button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .profile-form button:hover {
-    background-color: #0056b3;
-}
-
-body.light {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-body.light .navLink {
-    color: #000000;
-}
-
-body.dark {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-body.dark .navLink {
-    color: #ffffff;
-}
-
-body.default {
-    font-family: 'Inter', sans-serif;
-}
-
-body.serif {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-body.sans-serif {
-    font-family: 'Arial', Helvetica, sans-serif;
-}
-
-body.dyslexie {
-    font-family: "Lexend", serif;
-}
-
-#message-container {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 25rem;
-    z-index: 1000;
-}
-
-.navLink {
-    text-decoration: none;
+  background-color: #0056b3;
 }
 
 .profile-picture {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Message container styles */
+#message-container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 25rem;
+  z-index: 1000;
+}
+
+/* Navigation and footer link styles */
+.navLink .footer-link,
+.footer .footer-link {
+  text-decoration: none;
+}
+
+body.light .navLink .footer-link,
+body.light .footer .footer-link {
+  color: #000000;
+}
+
+body.dark .navLink .footer-link,
+body.dark .footer .footer-link {
+  color: #ffffff;
 }

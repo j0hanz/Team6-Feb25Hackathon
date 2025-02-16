@@ -12,17 +12,6 @@
           Profile
         </h1>
 
-        <!-- Display messages -->
-        {% if messages %}
-          <div class="mb-4">
-            {% for message in messages %}
-              <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-              </div>
-            {% endfor %}
-          </div>
-        {% endif %}
-
         <!-- Display current profile picture -->
         {% if user.profile_picture %}
           <div class="mb-4">

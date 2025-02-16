@@ -98,3 +98,12 @@ body.dyslexie {
     font-family: "Lexend", serif;
 }
 
+#message-container {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 25rem;
+    z-index: 1000;
+}

@@ -14,7 +14,9 @@
         <div class="card bg-dark text-white mb-4">
           <img src="{{ profile.profile_picture.url }}"
                class="card-img-top img-fluid rounded"
-               alt="{{ profile.username }}" />
+               alt="{{ profile.username }}"
+               height="200"
+               width="200" />
           <div class="card-body">
             <h5 class="card-title">
               {{ profile.username }}
@@ -31,6 +33,18 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <h2 class="text-center mb-4">
+        Gallery
+      </h2>
+      {% for image in profile.gallery_images.all %}
+        <div class="col-md-4 mb-4">
+          <img src="{{ image.image.url }}"
+               class="img-fluid img-thumbnail"
+               alt="Gallery Image" />
+        </div>
+      {% endfor %}
     </div>
   </div>
 {% endblock content %}

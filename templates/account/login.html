@@ -22,6 +22,10 @@
           <div class="form-group mb-3">
             {{ form.password }}
             {{ form.password.errors }}
+            <small id="id_password_helptext"
+                   class="form-text text-muted d-block my-3">
+              {% trans "Your password must contain at least 8 characters." %}
+            </small>
           </div>
           {% if redirect_field_value %}
             <input type="hidden"

@@ -1,17 +1,17 @@
 /* General body styles */
 body {
-    background-color: rgba(139, 212, 255, 0.856);
-    color: rgb(18, 60, 139);
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #222;
 }
 
 body.light {
-  background-color: #ffffff;
-  color: #000000;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #222;
 }
 
 body.dark {
-  background-color: #000000;
-  color: #ffffff;
+  background: linear-gradient(to right, #2c3e50, #34495e);
+  color: #ddd;
 }
 
 body.default {
@@ -126,4 +126,77 @@ body.light .footer .footer-link {
 body.dark .navLink .footer-link,
 body.dark .footer .footer-link {
   color: #ffffff;
+}
+
+/* custom button */
+.button-animation {
+  padding: 0.4em 1.6em;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background: #ff4d4d;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-animation:hover {
+  transform: scale(1.05);
+}
+
+.button-animation:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff6666,
+    #ff4d4d,
+    #ff3333,
+    #ff1a1a,
+    #ff0000,
+    #ff6666,
+    #ff4d4d,
+    #ff3333,
+    #ff6666
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-animation 10s linear infinite;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-animation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-animation:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #b30000;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }

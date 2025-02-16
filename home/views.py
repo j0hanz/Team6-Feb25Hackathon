@@ -21,7 +21,8 @@ def match_profiles(request):
         if sexual_orientation:
             profiles = profiles.filter(sexual_orientation=sexual_orientation)
         if age_range:
-            profiles = profiles.filter(age_range=age_range)
+            min_age, max_age = map(int, age_range.split('-'))
+            profiles = profiles.filter(age__gte=min_age, age__lte=max_age)
         if interests:
             profiles = profiles.filter(interests=interests)
 
@@ -36,8 +37,10 @@ def auto_match_profiles(request):
         profiles = UserProfile.objects.exclude(id=user.id)
         if user.interests:
             profiles = profiles.filter(gender=user.interests)
-        if user.age_range:
-            profiles = profiles.filter(age_range=user.age_range)
+        if user.age:
+            min_age = user.age - 5
+            max_age = user.age + 5
+            profiles = profiles.filter(age__gte=min_age, age__lte=max_age)
 
     return render(request, 'home/auto_match.html', {'profiles': profiles})
 

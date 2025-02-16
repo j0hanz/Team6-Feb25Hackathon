@@ -66,16 +66,22 @@
           <div class="col-md-4">
             <div class="mb-4">
               <img src="{{ profile.profile_picture.url }}"
-                   class="img-fluid img-thumbnail"
+                   class="card-img-top img-fluid img-thumbnail"
                    alt="{{ profile.username }}"
                    height="200"
                    width="200" />
-              <h5 class="card-title">
-                {{ profile.username }}
-              </h5>
-              <p class="card-text">
-                {{ profile.about }}
-              </p>
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{ profile.username }}
+                </h5>
+                <div class="card-text">
+                  Age: {{ profile.age }}
+                  <br />
+                  About: {{ profile.about }}
+                  <br />
+                  Interests: {{ profile.interests }}
+                </div>
+              </div>
             </div>
           </div>
         {% endfor %}

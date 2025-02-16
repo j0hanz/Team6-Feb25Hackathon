@@ -38,10 +38,14 @@ The i
 [Back to top](#top)
 
 ## User Experience Design
-A u
+The user experience for this site was optimized with the use of Bootstrap, CSS and React.<br>
+The website provides a smooth experience for the user with the background colour and text colour showing an overall great contrast.<br>
+There is the option to use the default colour scheme that is also the light mode and to use a dark version of the website.
+Users with difficulty to read the words, can use the dyslexia mode.
 
 ### Project Brief
-The p
+The idea for this project came from the organisation of this hackathon, that requested the different groups to create a dating app that would be inclusive.<br>
+Initially there were some ideas, like a dark and light more and also a way to help users with dyslexia, which the team was able to implement.
 
 ### Users
 In order to fully understand our users needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and here are the personas we used:
@@ -114,18 +118,10 @@ Quote: "I want to find someone who appreciates my creativity and supports my art
 
 ## Project Plan
 Initially the group got together when the team was known after the first webinar. A repository was created and colaborators were adeed to allow different members to create their branches and work locally, as necessary.<br>
-After this, a project board was also created on GitHubOn, the draft user stories were done with the help of MS Co-pilot.<br> 
-Co-pilot provided sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. <br>
-Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe.<br>
+After this, a project board was also created on GitHub, different issues were created, according to different things that needed to be done on the website.<br> 
+Tough initially, everyone looked excited with the project, on the second day, 2 members had to leave the project, and the project ended up with just 2 members, were one was the manager and doing the background and the other was more in the frontend and learning from a senior coder, plus heping as possible with pull requests.<br>
 
 ### User Stories
-Here are all the user stories that have been prioritised for the current implementation of the site:
-| User Stories                                    | MoSCoW priority           |  Status  |
-| ----------------------------------------------- |:-------------------------:| --------:|
-| Po                                              | must have                 |   Done   |
-
-
-
 All user stories were logged on the [GitHub Project Board](https://github.com/users/j0hanz/projects/8) on GitHub repo, along with the assessment criteria and expected performance for the Hackatho<br>
 There were also prioritised as must-have, should-have and could-have.<br>
 As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline.<br>
@@ -137,33 +133,31 @@ As well as using the Project Board to track progress on our project, we also use
 Initial layout of website in different devices:
 
 - Mobile view:<br>
-  <img src="">
-  
-- Tablet view:<br>
-  <img src="">
+  <img src="docs\wireframes\mobile-view.png">
   
 - Desktop/Laptop view:<br>
-  <img src="">
+  <img src="docs\wireframes\desktop-view.png">
 
 
 [Back to top](#top)
 
 ## Design
 ### Colour Scheme
-This .
+This site was created with the following colours from the colour palette.
 
 - Colour Palette <br>
-  Done using [coolors](https://coolors.co/)<br>
+  Done using [colorkit.co](https://colorkit.co/color-palette-generator/)<br>
 
-  <img src="">
+  <img src="docs\wireframes\colorkit-dark+light-mode.png">
 
 - Contrast check <br>
   Contrast was checked using [WebAIM](https://webaim.org/resources/contrastchecker/)<br>
   
-  <img src="">
+  <img src="docs\wireframes\contrast-check-dark.png">
+  <img src="docs\wireframes\contrast-check-light.png">
 
 ### Logo
-![logo](static/images/logo-4-+.png)<br>
+![logo](static\images\logo.webp)<br>
 
 [Back to top](#top)
 
@@ -181,43 +175,47 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 
 ## Website Features
 
-### Common Features/Links to all pages
-- Nav
+### Common Features/Links to most pages
+- Navbar
+<img src="docs\wireframes\navbar.png">
+
+- GitHub repo link
+<img src="docs\wireframes\github-repo-link.png">
+
+- Signup button
+<img src="docs\wireframes\sigunp-button.png">
 
 ### Homepage
-  <img src=""><br>
-- In 
+- https://team6-feb25hackathon-f88a0e757625.herokuapp.com/
 
 ### About
-  <img src=""><br>
-  <img src=""><br>
-- Information about the website.
+- https://team6-feb25hackathon-f88a0e757625.herokuapp.com/
 
 [Back to top](#top)
 
 ### Register
-  <img src=""><br>
-- Requests different details to the user to create a personal account.
+- https://team6-feb25hackathon-f88a0e757625.herokuapp.com/accounts/signup/
 
 [Back to top](#top)
 
 ### Login
-  <img src=""><br>
-- Allows the user to access the account created.
+- https://team6-feb25hackathon-f88a0e757625.herokuapp.com/accounts/login/
 
-### Profile
-  <img src=""><br>
-- View of the user profile page.
+### Signup
+- https://team6-feb25hackathon-f88a0e757625.herokuapp.com/accounts/signup/
 
 
 
 [Back to top](#top)
 
 ## Responsive Design
-Respo
+Responsive design was achieved with the use of CSS and Bootstrap to optimize the display of the content in different screen sizes.
+The most important for the team during this project were mobile screens and desktop screens
 
 ## Future Features
-- Pr
+- Ability for users to send messages to each other
+- Login with Social Networks
+- Random selection of matching profiles
 
 [Back to top](#top)
 
@@ -226,7 +224,6 @@ Respo
 ![Static Badge](https://img.shields.io/badge/HTML5-Language-blue)
 ![Static Badge](https://img.shields.io/badge/CSS3-Language-blue)
 ![Static Badge](https://img.shields.io/badge/GitHub-RepoHosting-black)
-![Static Badge](https://img.shields.io/badge/Gitpod-IDE-yellow)
 ![Static Badge](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E)
 
@@ -243,7 +240,6 @@ Respo
 ### Frameworks
 ![Static Badge](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
-![Static Badge](static/images/cloudinary-squareLogo.webp)
 
 ### DataBases
 ![Static Badge](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
@@ -305,39 +301,39 @@ Validation of HTML/CSS, Lighthouse Audits.
 
 ### HTML Validation
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_uri) to test the HTML on all webpages and updated as needed. No errors found after fixing.
-![HTML_validation]()
+<details>
+<img src="docs\wireframes\html-validation-home.png">
+<img src="docs\wireframes\html-validation-about.png">
+<img src="docs\wireframes\html-validation-login.png")
+<img src="docs\wireframes\html-validation-logout-from-account.png">
+<img src="docs\wireframes\html-validation-match.png">
+<img src="docs\wireframes\html-validation-auto-match.png">
+<img src="docs\wireframes\html-validation-profile-page.png">
+</details>
 
 ### CSS Validation
 
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found on all pages for style.
-![CSS_validation]()
+![CSS_validation](docs\wireframes\css-validation.png)
 
 [Back to top](#top)
 
 ### Lighthouse Audit
 Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. <br>
-
-- Home<br>
-<img src="">
-
-
-
-[Back to top](#top)
-
-- Signup<br>
-<img src="">
-
-- Login<br>
-<img src="">
-
-- Profile<br>
-<img src="">
-
-
-
-### Python Testing
-- No e. <br>
-<img src="">
+<details>
+<img src="docs\wireframes\lighthouse-light-home.png">
+<img src="docs\wireframes\lighthouse-light-about.png">
+<img src="docs\wireframes\lighthouse-light-auto-match.png">
+<img src="docs/wireframes/lighthouse-light-gallery.png">
+<img src="docs\wireframes\lighthouse-light-login.png">
+<img src="docs\wireframes\lighthouse-light-match.png">
+<img src="docs\wireframes\lighthouse-light-profile-defintions.png">
+<img src="docs\wireframes\lighthouse-light-profile-settings-dark.png">
+<img src="docs\wireframes\lighthouse-light-profile.png">
+<img src="docs\wireframes\lighthouse-light-signout.png">
+<img src="docs\wireframes\lighthouse-light-signup.png">
+<img src="docs\wireframes\lighthouse-light-user-profile.png">
+</details>
 
 [Back to top](#top)
 
@@ -355,9 +351,6 @@ The team
 ### Group Members
 https://github.com/j0hanz
 https://github.com/Russlyman
-https://github.com/Swewi
-https://github.com/Dhruvesh48
 https://github.com/Carlos-n21
-https://github.com/Tori-coder
 
 [Back to top](#top)

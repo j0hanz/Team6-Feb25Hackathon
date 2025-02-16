@@ -17,22 +17,20 @@
     <p>Your journey to finding love starts here. Join our inclusive community and connect with like-minded individuals.</p>    
   </div>
 </div>
-<div class="emotional-appeal">
+<div class="emotional-appeal hero">
   <h2>Find Your Perfect Match</h2>
-  <p>At Giggle Dates, we believe that everyone deserves to find love and happiness. Our community is built on trust, respect, and inclusivity. Whether you're looking for a soulmate or new friends, Giggle Dates is the place to start your journey.</p>
+  <p>At Giggle Dates, we believe that everyone deserves to find love and happiness. <br>Our community is built on trust, respect, and inclusivity. Whether you're looking for a soulmate or new friends, <br>Giggle Dates is the place to start your journey.</p>
   
   <h2>Real Connections, Real People</h2>
-  <p>Our members are genuine people looking for meaningful connections. We provide a safe and welcoming environment where you can be yourself and meet others who share your values and interests.</p>
+  <p>Our members are genuine people looking for meaningful connections. We provide a safe and welcoming environment <br>where you can be yourself and meet others who share your values and interests.</p>
   
-  <h2>Join a Supportive Community</h2>
-  <p>When you join Giggle Dates, you're not just signing up for a dating app; you're becoming part of a supportive and caring community. Our members are here to support each other and build lasting relationships.</p>
 </div>
 
 
 {% if not user.is_authenticated %}
-<div class="call-to-action">
+<div class="call-to-action hero">
   <h2>Start Your Journey Today!</h2>
-  <p>Sign up now and take the first step towards finding love and companionship. It's free and only takes a few minutes to create your profile.</p>
+  <p>Sign up now and take the first step towards finding love and companionship. <br>It's free and only takes a few minutes to create your profile.</p>
   <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a>
 </div>
 {% endif %}

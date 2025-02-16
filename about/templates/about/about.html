@@ -6,7 +6,6 @@
   About
 {% endblock title %}
 
-
 {% block content %}
   <div class="container my-5">
     <div class="row align-items-center">
@@ -19,47 +18,47 @@
       </div>
       <div class="col-md-6">
         <h1>
-          About GiggleDates
+          <i class="fas fa-info-circle"></i> About GiggleDates
         </h1>
         <p>
           Welcome to our inclusive dating app, where we celebrate diversity and help people from all walks of life find love. Whether you're looking for a serious relationship or just want to meet new people, our app is designed to connect you with like-minded individuals who share your interests and values.
         </p>
       </div>
     </div>
-
     <div class="row my-5">
       <div class="col-12">
         <h2>
-          Why Choose Giggle Dates?
+          <i class="fas fa-question-circle"></i> Why Choose Giggle Dates?
         </h2>
-        <ul class="list-unstyled">
-          <li>
-            <strong>Inclusive Community:</strong> We celebrate diversity and welcome people from all walks of life.
+        <ul class="list-unstyled mt-3">
+          <li class="ms-1 my-2">
+            <i class="fas fa-users"></i> <strong>Inclusive Community:</strong> We celebrate diversity and welcome people from all walks of life.
           </li>
-          <li>
-            <strong>Advanced Matching:</strong> Our algorithm connects you with like-minded individuals who share your interests and values.
+          <li class="ms-1 my-2">
+            <i class="fas fa-brain"></i> <strong>Advanced Matching:</strong> Our algorithm connects you with like-minded individuals who share your interests and values.
           </li>
-          <li>
-            <strong>Safe and Secure:</strong> Your privacy and security are our top priorities. We ensure a safe environment for all users.
+          <li class="ms-1 my-2">
+            <i class="fas fa-shield-alt"></i> <strong>Safe and Secure:</strong> Your privacy and security are our top priorities. We ensure a safe environment for all users.
           </li>
-          <li>
-            <strong>Easy to Use:</strong> Our user-friendly interface makes it easy to find and connect with potential matches.
+          <li class="ms-1 my-2">
+            <i class="fas fa-thumbs-up"></i> <strong>Easy to Use:</strong> Our user-friendly interface makes it easy to find and connect with potential matches.
           </li>
         </ul>
       </div>
     </div>
-
     {% if not user.is_authenticated %}
       <div class="row my-5 text-center">
         <div class="col-12">
           <h2>
-            Get Started Today!
+            <i class="fas fa-sign-in-alt"></i> Get Started Today!
           </h2>
           <p>
             Sign up now and start your journey to finding love. It's free and only takes a few minutes to create your profile.
           </p>
           <a href="{% url 'account_signup' %}"
-             class="btn btn-primary">Sign Up</a>
+             class="btn btn-primary">
+            <i class="fas fa-user-plus"></i> Sign Up
+          </a>
         </div>
       </div>
     {% endif %}

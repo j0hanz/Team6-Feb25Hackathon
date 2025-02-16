@@ -9,9 +9,8 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10 text-center">
         <h1 class="text-center mb-4">
-          Gallery
+          <i class="fas fa-images"></i> Gallery
         </h1>
-
         <form method="post"
               enctype="multipart/form-data">
           {% csrf_token %}
@@ -22,12 +21,11 @@
           </div>
           <button type="submit"
                   class="btn btn-primary">
-            Upload Image
+            <i class="fas fa-upload"></i> Upload Image
           </button>
         </form>
-
         <h2 class="mt-5">
-          Uploaded Images
+          <i class="fas fa-image"></i> Uploaded Images
         </h2>
         <div class="row">
           {% for image in images %}
@@ -46,7 +44,7 @@
                 <button type="submit"
                         name="delete_image"
                         class="btn btn-danger btn-sm">
-                  Delete
+                  <i class="fas fa-trash-alt"></i> Delete
                 </button>
               </form>
             </div>

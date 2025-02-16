@@ -7,7 +7,7 @@
 {% block content %}
   <div class="container">
     <h1 class="text-center mb-4">
-      Find Your Match
+      <i class="fas fa-heart"></i> Find Your Match
     </h1>
     <form method="get"
           action="{% url 'match_profiles' %}">
@@ -15,7 +15,7 @@
         <div class="col-md-6">
           <label for="gender"
                  class="form-label">
-            Gender
+            <i class="fas fa-venus-mars"></i> Gender
           </label>
           <select id="gender"
                   name="gender"
@@ -33,7 +33,7 @@
         <div class="col-md-6">
           <label for="sexual_orientation"
                  class="form-label">
-            Sexual Orientation
+            <i class="fas fa-rainbow"></i> Sexual Orientation
           </label>
           <select id="sexual_orientation"
                   name="sexual_orientation"
@@ -51,7 +51,7 @@
         <div class="col-md-6">
           <label for="age_range"
                  class="form-label">
-            Age Range
+            <i class="fas fa-hourglass-half"></i> Age Range
           </label>
           <select id="age_range"
                   name="age_range"
@@ -69,7 +69,7 @@
         <div class="col-md-6">
           <label for="interests"
                  class="form-label">
-            Interests
+            <i class="fas fa-star"></i> Interests
           </label>
           <select id="interests"
                   name="interests"
@@ -88,18 +88,17 @@
       <div class="text-center">
         <button type="submit"
                 class="btn btn-primary">
-          Search
+          <i class="fas fa-search"></i> Search
         </button>
         <a href="{% url 'auto_match_profiles' %}"
            class="btn btn-secondary">
-          Auto Match
+          <i class="fas fa-magic"></i> Auto Match
         </a>
       </div>
     </form>
-
     {% if profiles %}
       <h2 class="mt-5">
-        Matching Profiles
+        <i class="fas fa-user-friends"></i> Matching Profiles
       </h2>
       <div class="row">
         {% for profile in profiles %}
@@ -114,15 +113,17 @@
                 <h5 class="card-title">
                   {{ profile.username }}
                 </h5>
-                <div class="card-text">
-                  Age: {{ profile.age }}
+                <div class="card-text my-2">
+                  <i class="fas fa-birthday-cake"></i> Age: {{ profile.age }}
                   <br />
-                  About: {{ profile.about }}
+                  <i class="fas fa-info-circle"></i> About: {{ profile.about }}
                   <br />
-                  Interests: {{ profile.interests }}
+                  <i class="fas fa-heart"></i> Interests: {{ profile.interests }}
                 </div>
                 <a href="{% url 'user_profile' profile.id %}"
-                   class="btn btn-primary mt-2">Read more</a>
+                   class="btn btn-primary mt-2 w-100">
+                  <i class="fas fa-info-circle"></i> Read more
+                </a>
               </div>
             </div>
           </div>

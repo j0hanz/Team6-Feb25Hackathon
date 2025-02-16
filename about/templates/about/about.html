@@ -1,40 +1,67 @@
 {% extends "base.html" %}
+
 {% load static %}
+
 {% block title %}
   About
 {% endblock title %}
 
+
 {% block content %}
-<div class="hero">
-  <img class="img-main img-fluid"
-         src="{% static 'images/logo.webp' %}"
-         alt="Logo"
-         width="300"
-         height="300" />
-    <div class="hero-text">
-    <h1>About GiggleDates</h1>
-    <p>Welcome to our inclusive dating app, where we celebrate diversity and help people from all walks of life find love. <br>
-      Whether you're looking for a serious relationship or just want to meet new people, <br>
-      our app is designed to connect you with like-minded individuals <br>
-      who share your interests and values.</p>
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <img class="img-fluid"
+             src="{% static 'images/logo.webp' %}"
+             alt="Logo"
+             width="300"
+             height="300" />
+      </div>
+      <div class="col-md-6">
+        <h1>
+          About GiggleDates
+        </h1>
+        <p>
+          Welcome to our inclusive dating app, where we celebrate diversity and help people from all walks of life find love. Whether you're looking for a serious relationship or just want to meet new people, our app is designed to connect you with like-minded individuals who share your interests and values.
+        </p>
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-12">
+        <h2>
+          Why Choose Giggle Dates?
+        </h2>
+        <ul class="list-unstyled">
+          <li>
+            <strong>Inclusive Community:</strong> We celebrate diversity and welcome people from all walks of life.
+          </li>
+          <li>
+            <strong>Advanced Matching:</strong> Our algorithm connects you with like-minded individuals who share your interests and values.
+          </li>
+          <li>
+            <strong>Safe and Secure:</strong> Your privacy and security are our top priorities. We ensure a safe environment for all users.
+          </li>
+          <li>
+            <strong>Easy to Use:</strong> Our user-friendly interface makes it easy to find and connect with potential matches.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {% if not user.is_authenticated %}
+      <div class="row my-5 text-center">
+        <div class="col-12">
+          <h2>
+            Get Started Today!
+          </h2>
+          <p>
+            Sign up now and start your journey to finding love. It's free and only takes a few minutes to create your profile.
+          </p>
+          <a href="{% url 'account_signup' %}"
+             class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
+    {% endif %}
   </div>
-</div>
-<div class="features hero">
-  <h2>Why Choose Giggle Dates?</h2>
-  <ul>
-    <ul><strong>Inclusive Community:</strong> We celebrate diversity and welcome people from all walks of life.</ul>
-    <ul><strong>Advanced Matching:</strong> Our algorithm connects you with like-minded individuals who share your interests and values.</ul>
-    <ul><strong>Safe and Secure:</strong> Your privacy and security are our top priorities. We ensure a safe environment for all users.</ul>
-    <ul><strong>Easy to Use:</strong> Our user-friendly interface makes it easy to find and connect with potential matches.</ul>
-  </ul>
-</div>
-
-{% if not user.is_authenticated %}
-<div class="call-to-action hero">
-  <h2>Get Started Today!</h2>
-  <p>Sign up now and start your journey to finding love. <br>It's free and only takes a few minutes to create your profile.</p>
-  <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a>
-</div>
-{% endif %}
-
 {% endblock content %}

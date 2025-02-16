@@ -77,8 +77,16 @@ body.light {
     color: #000000;
 }
 
+body.light .navLink {
+    color: #000000;
+}
+
 body.dark {
     background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark .navLink {
     color: #ffffff;
 }
 
@@ -98,3 +106,23 @@ body.dyslexie {
     font-family: "Lexend", serif;
 }
 
+#message-container {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 25rem;
+    z-index: 1000;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}

@@ -66,6 +66,16 @@ class UserProfile(AbstractUser):
         return self.username
 
 
+class ProfileImage(models.Model):
+    user = models.ForeignKey(
+        UserProfile, on_delete=models.CASCADE, related_name='gallery_images'
+    )
+    image = CloudinaryField('image')
+
+    def __str__(self):
+        return f"{self.user.username}'s image"
+
+
 @receiver(post_save, sender=UserProfile)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:

@@ -51,9 +51,17 @@
                {% endif %}">
     <header>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <button class="navbar-toggler navbar-dark py-1 px-2 m-0"
+      <nav class="navbar navbar-expand-lg sticky-top align-items-baseline">
+        <div class="container-fluid">
+          <a class="navbar-brand"
+             href="{% url 'home' %}">
+            <img src="{% static 'images/nav-logo.webp' %}"
+                 alt="logo top"
+                 class="img-top"
+                 height="40"
+                 width="40" />
+          </a>
+          <button class="navbar-toggler navbar-dark py-1 m-0"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarNav"
@@ -66,34 +74,39 @@
                id="navbarNav">
             <ul class="navbar-nav me-auto mb-0">
               <li class="nav-item">
-                <a class="nav-link"
+                <a class="navLink nav-link"
                    href="{% url 'home' %}"
                    title="Home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"
+                <a class="navLink nav-link"
                    href="{% url 'about' %}"
                    title="About">About</a>
               </li>
               {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link"
-                     href="{% url 'profile' %}"
+                  <a class="navLink nav-link"
+                     href="{% url 'profile_page_view' %}"
                      title="Profile">{{ user.username }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
+                     href="{% url 'match_profiles' %}"
+                     title="Match Profiles">Match Profiles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="navLink nav-link"
                      href="{% url 'account_logout' %}"
                      title="Logout">Logout</a>
                 </li>
               {% else %}
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
                      href="{% url 'account_login' %}"
                      title="Login">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
                      href="{% url 'account_signup' %}"
                      title="Sign Up">Sign Up</a>
                 </li>
@@ -103,6 +116,22 @@
         </div>
       </nav>
     </header>
+    {% if messages %}
+      <div id="message-container"
+           class="text-center mb-4">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show"
+               role="alert">
+            {{ message }}
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close">
+            </button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
     <main id="main-content"
           class="pt-5">
       {% block content %}

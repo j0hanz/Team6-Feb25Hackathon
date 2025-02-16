@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 
-from .models import UserProfile
+from .models import ProfileImage, UserProfile
 
 
 class UserProfileCreationForm(UserCreationForm):
@@ -44,3 +44,9 @@ class UserProfileChangeForm(UserChangeForm):
             'interests': forms.Textarea(attrs={'placeholder': 'Interests'}),
             'font_family': forms.Select(attrs={'id': 'font-family-selector'}),
         }
+
+
+class ProfileImageForm(forms.ModelForm):
+    class Meta:
+        model = ProfileImage
+        fields = ['image']

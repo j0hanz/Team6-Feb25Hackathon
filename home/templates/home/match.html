@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Match Profiles
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="text-center mb-4">
+      Find Your Match
+    </h1>
+    <form method="get"
+          action="{% url 'match_profiles' %}">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="gender"
+                 class="form-label">
+            Gender
+          </label>
+          <select id="gender"
+                  name="gender"
+                  class="form-select">
+            <option value="">
+              Any
+            </option>
+            {% for key, value in user.GENDER_CHOICES %}
+              <option value="{{ key }}">
+                {{ value }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="sexual_orientation"
+                 class="form-label">
+            Sexual Orientation
+          </label>
+          <select id="sexual_orientation"
+                  name="sexual_orientation"
+                  class="form-select">
+            <option value="">
+              Any
+            </option>
+            {% for key, value in user.SEXUAL_ORIENTATION_CHOICES %}
+              <option value="{{ key }}">
+                {{ value }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit"
+                class="btn btn-primary">
+          Search
+        </button>
+      </div>
+    </form>
+
+    {% if profiles %}
+      <h2 class="mt-5">
+        Matching Profiles
+      </h2>
+      <div class="row">
+        {% for profile in profiles %}
+          <div class="col-md-4">
+            <div class="mb-4">
+              <img src="{{ profile.profile_picture.url }}"
+                   class="card-img-top img-fluid"
+                   alt="{{ profile.username }}"
+                   height="200"
+                   width="200" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{ profile.username }}
+                </h5>
+                <div class="card-text">
+                  Age: {{ profile.age }}
+                  <br />
+                  About: {{ profile.about }}
+                  <br />
+                  Interests: {{ profile.interests }}
+                </div>
+                <a href="{% url 'user_profile' profile.id %}"
+                   class="btn btn-primary mt-2">Read more</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endblock content %}

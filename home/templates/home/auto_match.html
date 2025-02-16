@@ -7,19 +7,17 @@
 {% block content %}
   <div class="container">
     <h1 class="text-center mb-4">
-      Automatically Matched Profiles
+      <i class="fas fa-users"></i> Automatically Matched Profiles
     </h1>
-
     <div class="text-center mb-4">
       <a href="{% url 'match_profiles' %}"
          class="btn btn-secondary">
-        Manual Search
+        <i class="fas fa-search"></i> Manual Search
       </a>
     </div>
-
     {% if profiles %}
       <h2 class="mt-5">
-        Matching Profiles
+        <i class="fas fa-user-friends"></i> Matching Profiles
       </h2>
       <div class="row">
         {% for profile in profiles %}
@@ -34,15 +32,17 @@
                 <h5 class="card-title">
                   {{ profile.username }}
                 </h5>
-                <div class="card-text">
-                  Age: {{ profile.age }}
+                <div class="card-text my-2">
+                  <i class="fas fa-birthday-cake"></i> Age: {{ profile.age }}
                   <br />
-                  About: {{ profile.about }}
+                  <i class="fas fa-info-circle"></i> About: {{ profile.about }}
                   <br />
-                  Interests: {{ profile.interests }}
+                  <i class="fas fa-heart"></i> Interests: {{ profile.interests }}
                 </div>
                 <a href="{% url 'user_profile' profile.id %}"
-                   class="btn btn-primary mt-2">Read more</a>
+                   class="btn btn-primary mt-2 w-100">
+                  <i class="fas fa-info-circle"></i> Read more
+                </a>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@
       </div>
     {% else %}
       <p class="text-center">
-        No matching profiles found.
+        <i class="fas fa-exclamation-circle"></i> No matching profiles found.
       </p>
     {% endif %}
   </div>

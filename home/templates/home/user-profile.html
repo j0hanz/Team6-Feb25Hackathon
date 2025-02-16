@@ -7,7 +7,7 @@
 {% block content %}
   <div class="container">
     <h1 class="text-center mb-4">
-      {{ profile.username }}'s Profile
+      <i class="fas fa-user"></i> {{ profile.username }}'s Profile
     </h1>
     <div class="row justify-content-center">
       <div class="col-md-4">
@@ -22,13 +22,13 @@
               {{ profile.username }}
             </h5>
             <p class="card-text">
-              Age: {{ profile.age }}
+              <i class="fas fa-birthday-cake"></i> Age: {{ profile.age }}
             </p>
             <p class="card-text">
-              About: {{ profile.about }}
+              <i class="fas fa-info-circle"></i> About: {{ profile.about }}
             </p>
             <p class="card-text">
-              Interests: {{ profile.interests }}
+              <i class="fas fa-heart"></i> Interests: {{ profile.interests }}
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@
     </div>
     <div class="row">
       <h2 class="text-center mb-4">
-        Gallery
+        <i class="fas fa-images"></i> Gallery
       </h2>
       {% for image in profile.gallery_images.all %}
         <div class="col-md-4 mb-4">

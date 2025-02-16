@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="hero">
-  <img src="static\images\new-design2.png" alt="Hero Image" class="hero-image">
+  <img src="{% static 'images/logo.webp' %}" alt="Hero Image" class="hero-image">
   <div class="hero-text">
     <h1>About GiggleDates</h1>
     <p>Welcome to our inclusive dating app, where we celebrate diversity and help people from all walks of life find love. <br>
@@ -14,5 +14,20 @@
       our app is designed to connect you with like-minded individuals <br>
       who share your interests and values.</p>
   </div>
+</div>
+<div class="features">
+  <h2>Why Choose Giggle Dates?</h2>
+  <ul>
+    <li><strong>Inclusive Community:</strong> We celebrate diversity and welcome people from all walks of life.</li>
+    <li><strong>Advanced Matching:</strong> Our algorithm connects you with like-minded individuals who share your interests and values.</li>
+    <li><strong>Safe and Secure:</strong> Your privacy and security are our top priorities. We ensure a safe environment for all users.</li>
+    <li><strong>Easy to Use:</strong> Our user-friendly interface makes it easy to find and connect with potential matches.</li>
+  </ul>
+</div>
+
+<div class="call-to-action">
+  <h2>Get Started Today!</h2>
+  <p>Sign up now and start your journey to finding love. It's free and only takes a few minutes to create your profile.</p>
+  <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
 </div>
 {% endblock content %}

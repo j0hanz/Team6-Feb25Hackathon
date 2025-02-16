@@ -59,9 +59,6 @@ class UserProfile(AbstractUser):
         max_length=2, choices=SEXUAL_ORIENTATION_CHOICES, blank=True
     )
     age = models.PositiveIntegerField(null=True, blank=True)
-    age_range = models.CharField(
-        max_length=5, choices=AGE_RANGE_CHOICES, blank=True
-    )
     about = models.TextField(blank=True)
     interests = models.CharField(
         max_length=2, choices=GENDER_CHOICES, blank=True

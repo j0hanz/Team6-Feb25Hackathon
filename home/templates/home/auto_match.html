@@ -15,6 +15,9 @@
         <i class="fas fa-search"></i> Manual Search
       </a>
     </div>
+    <div class="text-center mb-4">
+      The auto-match feature uses your profile information such as interests and age to find the best matches for you. Make sure your profile is complete to get the best results.
+    </div>
     {% if profiles %}
       <h2 class="mt-5">
         <i class="fas fa-user-friends"></i> Matching Profiles
@@ -49,9 +52,12 @@
         {% endfor %}
       </div>
     {% else %}
-      <p class="text-center">
+      <div class="text-center">
         <i class="fas fa-exclamation-circle"></i> No matching profiles found.
-      </p>
+        <small class="d-block mt-3">
+          Please ensure your profile is complete with your interests, age, and other relevant information to improve your chances of finding a match.
+        </small>
+      </div>
     {% endif %}
   </div>
 {% endblock content %}

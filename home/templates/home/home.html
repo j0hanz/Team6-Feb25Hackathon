@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
   Giggle Dates
@@ -6,7 +7,11 @@
 
 {% block content %}
 <div class="hero">
-  <img src="" alt="Hero Image" class="hero-image">
+  <img class="img-main img-fluid"
+         src="{% static 'images/logo.webp' %}"
+         alt="Logo"
+         width="300"
+         height="300" />
   <div class="hero-text">
     <h1>Welcome to Giggle Dates</h1>
     <p>Your journey to finding love starts here. Join our inclusive community and connect with like-minded individuals.</p>

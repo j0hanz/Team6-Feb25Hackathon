@@ -52,7 +52,6 @@ class UserProfile(AbstractUser):
         default='nobody_nrbk5n',
         blank=True,
         null=True,
-        help_text='Upload a profile picture',
     )
     gender = models.CharField(max_length=2, choices=GENDER_CHOICES, blank=True)
     sexual_orientation = models.CharField(

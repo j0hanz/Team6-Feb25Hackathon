@@ -5,7 +5,44 @@
 {% endblock title %}
 
 {% block content %}
-  <h1>
-    Profile
-  </h1>
+<div class="profile-container">
+  <h1>Profile</h1>
+  <div class="image-upload-row">
+    <input type="file" name="image1" accept="image/*">
+    <input type="file" name="image2" accept="image/*">
+    <input type="file" name="image3" accept="image/*">
+  </div>
+  <div class="image-upload-row">
+    <input type="file" name="image4" accept="image/*">
+    <input type="file" name="image5" accept="image/*">
+    <input type="file" name="image6" accept="image/*">
+  </div>
+  <form class="profile-form">
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" name="gender">
+
+    <label for="sexual-orientation">Sexual Orientation:</label>
+    <input type="text" id="sexual-orientation" name="sexual-orientation">
+
+    <label for="looking-for">Looking For:</label>
+    <input type="text" id="looking-for" name="looking-for">
+
+    <label for="interests">Interests:</label>
+    <input type="text" id="interests" name="interests">
+
+    <label for="about">About:</label>
+    <textarea id="about" name="about"></textarea>
+
+    <label for="relationship">Relationship Type:</label>
+    <input type="text" id="relationship" name="relationship">
+
+    <label for="height">Height:</label>
+    <input type="text" id="height" name="height">
+
+    <label for="pronouns">Pronouns:</label>
+    <input type="text" id="pronouns" name="pronouns">
+
+    <button type="submit">Save Profile</button>
+  </form>
+</div>
 {% endblock content %}

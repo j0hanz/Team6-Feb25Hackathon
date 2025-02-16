@@ -1,7 +1,26 @@
-/* General body styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500;700&family=Lexend+Deca:wght@300;400;500;700&display=swap");
+
+:root {
+  --background-light: #c1d2eb;
+  --background-dark: #15293b;
+  --color-light: #222;
+  --color-dark: #ddd;
+  --primary-color: #007bff;
+  --primary-color-hover: #0056b3;
+  --button-background: #ff4d4d;
+  --button-background-hover: #ff6666;
+  --button-background-active: #b30000;
+  --hero-color: rgb(21, 76, 255);
+}
+
 body {
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
-  color: #222;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--color-light);
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -10,14 +29,20 @@ body.loaded {
   opacity: 1;
 }
 
-body.light {
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
-  color: #222;
+body.light,
+input,
+textarea,
+select {
+  background-color: var(--background-light) !important;
+  color: var(--color-light) !important;
 }
 
-body.dark {
-  background: linear-gradient(to right, #2c3e50, #34495e);
-  color: #ddd;
+body.dark,
+input,
+textarea,
+select {
+  background-color: var(--background-dark) !important;
+  color: var(--color-dark) !important;
 }
 
 body.default {
@@ -25,27 +50,60 @@ body.default {
 }
 
 body.serif {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Merriweather", serif;
 }
 
 body.sans-serif {
-  font-family: "Arial", Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body.dyslexie {
-  font-family: "Lexend", serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 
-/* About page styles */
+.navbar-toggler {
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:active {
+  transform: scale(0.95);
+}
+
+.navbar-toggler .fa-bars-staggered {
+  color: var(--button-background);
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-toggler:active .fa-bars-staggered:active {
+  transform: scale(0.9);
+}
+
 .hero {
   position: relative;
   text-align: center;
-  color: rgb(21, 76, 255);
+  color: var(--hero-color);
+  padding: 50px 0;
 }
 
 .hero-image {
   width: 70%;
-  padding-bottom: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
 }
 
 .hero-text {
@@ -53,9 +111,10 @@ body.dyslexie {
   left: 50%;
   padding: 20px;
   border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto 0;
 }
 
-/* Profile page styles */
 .profile-container {
   text-align: center;
   margin: 0 auto;
@@ -72,10 +131,14 @@ body.dyslexie {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .profile-form label {
   margin-top: 10px;
+  font-weight: 600;
 }
 
 .profile-form input,
@@ -83,13 +146,15 @@ body.dyslexie {
   margin-bottom: 10px;
   width: 100%;
   max-width: 300px;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .profile-form button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -97,7 +162,7 @@ body.dyslexie {
 }
 
 .profile-form button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-color-hover);
 }
 
 .profile-picture {
@@ -105,9 +170,10 @@ body.dyslexie {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Message container styles */
 #message-container {
   position: absolute;
   top: 5%;
@@ -118,7 +184,6 @@ body.dyslexie {
   z-index: 1000;
 }
 
-/* Navigation and footer link styles */
 .navLink .footer-link,
 .footer .footer-link {
   text-decoration: none;
@@ -134,20 +199,17 @@ body.dark .footer .footer-link {
   color: #ffffff;
 }
 
-/* custom button */
 .button-animation {
   padding: 0.4em 1.6em;
   border: none;
   outline: none;
   color: #ffffff;
-  background: #ff4d4d;
+  background: var(--button-background);
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -159,15 +221,15 @@ body.dark .footer .footer-link {
   content: "";
   background: linear-gradient(
     45deg,
-    #ff6666,
-    #ff4d4d,
+    var(--button-background-hover),
+    var(--button-background),
     #ff3333,
     #ff1a1a,
     #ff0000,
-    #ff6666,
-    #ff4d4d,
+    var(--button-background-hover),
+    var(--button-background),
     #ff3333,
-    #ff6666
+    var(--button-background-hover)
   );
   position: absolute;
   top: -2px;
@@ -175,7 +237,6 @@ body.dark .footer .footer-link {
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
-  -webkit-filter: blur(5px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: glowing-button-animation 10s linear infinite;
@@ -201,7 +262,7 @@ body.dark .footer .footer-link {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #b30000;
+  background: var(--button-background-active);
   left: 0;
   top: 0;
   border-radius: 10px;

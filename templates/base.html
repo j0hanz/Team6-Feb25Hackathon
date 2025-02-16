@@ -51,9 +51,17 @@
                {% endif %}">
     <header>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <button class="navbar-toggler navbar-dark py-1 px-2 m-0"
+      <nav class="navbar navbar-expand-lg sticky-top align-items-baseline">
+        <div class="container-fluid">
+          <a class="navbar-brand"
+             href="{% url 'home' %}">
+            <img src="{% static 'images/nav-logo.webp' %}"
+                 alt="logo top"
+                 class="img-top"
+                 height="40"
+                 width="40" />
+          </a>
+          <button class="navbar-toggler navbar-dark py-1 m-0"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarNav"

@@ -14,6 +14,7 @@ class UserProfileCreationForm(UserCreationForm):
             'gender',
             'sexual_orientation',
             'age',
+            'age_range',
             'about',
             'interests',
             'theme',
@@ -31,6 +32,7 @@ class UserProfileChangeForm(UserChangeForm):
             'gender',
             'sexual_orientation',
             'age',
+            'age_range',
             'about',
             'interests',
             'theme',
@@ -41,7 +43,7 @@ class UserProfileChangeForm(UserChangeForm):
             'email': forms.EmailInput(attrs={'placeholder': 'Email'}),
             'age': forms.NumberInput(attrs={'placeholder': 'Age'}),
             'about': forms.Textarea(attrs={'placeholder': 'About'}),
-            'interests': forms.Textarea(attrs={'placeholder': 'Interests'}),
+            'interests': forms.Select(attrs={'placeholder': 'Interests'}),
             'font_family': forms.Select(attrs={'id': 'font-family-selector'}),
         }
 

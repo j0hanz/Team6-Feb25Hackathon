@@ -48,12 +48,52 @@
             {% endfor %}
           </select>
         </div>
+        <div class="col-md-6">
+          <label for="age_range"
+                 class="form-label">
+            Age Range
+          </label>
+          <select id="age_range"
+                  name="age_range"
+                  class="form-select">
+            <option value="">
+              Any
+            </option>
+            {% for key, value in user.AGE_RANGE_CHOICES %}
+              <option value="{{ key }}">
+                {{ value }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="interests"
+                 class="form-label">
+            Interests
+          </label>
+          <select id="interests"
+                  name="interests"
+                  class="form-select">
+            <option value="">
+              Any
+            </option>
+            {% for key, value in user.GENDER_CHOICES %}
+              <option value="{{ key }}">
+                {{ value }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
       </div>
       <div class="text-center">
         <button type="submit"
                 class="btn btn-primary">
           Search
         </button>
+        <a href="{% url 'auto_match_profiles' %}"
+           class="btn btn-secondary">
+          Auto Match
+        </a>
       </div>
     </form>
 

@@ -37,6 +37,16 @@ class UserProfile(AbstractUser):
         ('dyslexie', 'Dyslexie'),
     ]
 
+    AGE_RANGE_CHOICES = [
+        ('18-25', '18-25'),
+        ('25-30', '25-30'),
+        ('30-35', '30-35'),
+        ('35-40', '35-40'),
+        ('40-45', '40-45'),
+        ('45-50', '45-50'),
+        ('50+', '50+'),
+    ]
+
     profile_picture = CloudinaryField(
         'image',
         default='nobody_nrbk5n',
@@ -49,8 +59,13 @@ class UserProfile(AbstractUser):
         max_length=2, choices=SEXUAL_ORIENTATION_CHOICES, blank=True
     )
     age = models.PositiveIntegerField(null=True, blank=True)
+    age_range = models.CharField(
+        max_length=5, choices=AGE_RANGE_CHOICES, blank=True
+    )
     about = models.TextField(blank=True)
-    interests = models.TextField(blank=True)
+    interests = models.CharField(
+        max_length=2, choices=GENDER_CHOICES, blank=True
+    )
     theme = models.CharField(
         max_length=5, choices=THEME_CHOICES, default='light'
     )

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Auto Match Profiles
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="text-center mb-4">
+      Automatically Matched Profiles
+    </h1>
+
+    <div class="text-center mb-4">
+      <a href="{% url 'match_profiles' %}"
+         class="btn btn-secondary">
+        Manual Search
+      </a>
+    </div>
+
+    {% if profiles %}
+      <h2 class="mt-5">
+        Matching Profiles
+      </h2>
+      <div class="row">
+        {% for profile in profiles %}
+          <div class="col-md-4">
+            <div class="mb-4">
+              <img src="{{ profile.profile_picture.url }}"
+                   class="card-img-top img-fluid"
+                   alt="{{ profile.username }}"
+                   height="200"
+                   width="200" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{ profile.username }}
+                </h5>
+                <div class="card-text">
+                  Age: {{ profile.age }}
+                  <br />
+                  About: {{ profile.about }}
+                  <br />
+                  Interests: {{ profile.interests }}
+                </div>
+                <a href="{% url 'user_profile' profile.id %}"
+                   class="btn btn-primary mt-2">Read more</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center">
+        No matching profiles found.
+      </p>
+    {% endif %}
+  </div>
+{% endblock content %}

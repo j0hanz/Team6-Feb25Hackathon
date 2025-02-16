@@ -51,7 +51,7 @@
                {% endif %}">
     <header>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
           <button class="navbar-toggler navbar-dark py-1 px-2 m-0"
                   type="button"
@@ -66,39 +66,39 @@
                id="navbarNav">
             <ul class="navbar-nav me-auto mb-0">
               <li class="nav-item">
-                <a class="nav-link"
+                <a class="navLink nav-link"
                    href="{% url 'home' %}"
                    title="Home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"
+                <a class="navLink nav-link"
                    href="{% url 'about' %}"
                    title="About">About</a>
               </li>
               {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
                      href="{% url 'profile' %}"
                      title="Profile">{{ user.username }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
                      href="{% url 'match_profiles' %}"
                      title="Match Profiles">Match Profiles</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
                      href="{% url 'account_logout' %}"
                      title="Logout">Logout</a>
                 </li>
               {% else %}
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
                      href="{% url 'account_login' %}"
                      title="Login">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"
+                  <a class="navLink nav-link"
                      href="{% url 'account_signup' %}"
                      title="Sign Up">Sign Up</a>
                 </li>

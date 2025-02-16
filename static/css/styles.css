@@ -1,7 +1,7 @@
 /* General body styles */
 body {
-  background-color: rgba(139, 212, 255, 0.856);
-  color: rgba(255, 255, 255, 0.884);
+    background-color: rgba(139, 212, 255, 0.856);
+    color: rgb(18, 60, 139);
 }
 
 body.light {

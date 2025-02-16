@@ -77,8 +77,16 @@ body.light {
     color: #000000;
 }
 
+body.light .navLink {
+    color: #000000;
+}
+
 body.dark {
     background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark .navLink {
     color: #ffffff;
 }
 
@@ -106,4 +114,8 @@ body.dyslexie {
     width: 100%;
     max-width: 25rem;
     z-index: 1000;
+}
+
+.navLink {
+    text-decoration: none;
 }

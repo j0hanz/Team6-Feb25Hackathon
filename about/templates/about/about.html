@@ -1,13 +1,17 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
   About
 {% endblock title %}
 
 {% block content %}
 <div class="hero">
-  <img src="{% static 'images/logo.webp' %}" alt="Hero Image" class="hero-image">
-  <div class="hero-text">
+  <img class="img-main img-fluid"
+         src="{% static 'images/logo.webp' %}"
+         alt="Logo"
+         width="300"
+         height="300" />
+    <div class="hero-text">
     <h1>About GiggleDates</h1>
     <p>Welcome to our inclusive dating app, where we celebrate diversity and help people from all walks of life find love. <br>
       Whether you're looking for a serious relationship or just want to meet new people, <br>
@@ -25,9 +29,11 @@
   </ul>
 </div>
 
+{% if not user.is_authenticated %}
 <div class="call-to-action">
   <h2>Get Started Today!</h2>
   <p>Sign up now and start your journey to finding love. It's free and only takes a few minutes to create your profile.</p>
   <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a>
 </div>
+{% endif %}
 {% endblock content %}

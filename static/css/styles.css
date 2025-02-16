@@ -2,6 +2,12 @@
 body {
   background: linear-gradient(to right, #e0eafc, #cfdef3);
   color: #222;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 body.light {

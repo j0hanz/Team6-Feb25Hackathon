@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from profiles.models import UserProfile
 
@@ -20,3 +20,8 @@ def match_profiles(request):
             profiles = profiles.filter(sexual_orientation=sexual_orientation)
 
     return render(request, 'home/match.html', {'profiles': profiles})
+
+
+def user_profile(request, user_id):
+    profile = get_object_or_404(UserProfile, id=user_id)
+    return render(request, 'home/user-profile.html', {'profile': profile})

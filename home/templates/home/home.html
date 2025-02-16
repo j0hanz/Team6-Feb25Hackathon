@@ -1,37 +1,67 @@
 {% extends "base.html" %}
+
 {% load static %}
 
 {% block title %}
   Giggle Dates
 {% endblock title %}
 
+
 {% block content %}
-<div class="hero">
-  <img class="img-main img-fluid"
-         src="{% static 'images/logo.webp' %}"
-         alt="Logo"
-         width="300"
-         height="300" />
-  <div class="hero-text">
-    <h1>Welcome to Giggle Dates</h1>
-    <p>Your journey to finding love starts here. Join our inclusive community and connect with like-minded individuals.</p>    
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <img class="img-fluid"
+             src="{% static 'images/logo.webp' %}"
+             alt="Logo"
+             width="300"
+             height="300" />
+      </div>
+      <div class="col-md-6">
+        <h1>
+          Welcome to Giggle Dates
+        </h1>
+        <p>
+          Your journey to finding love starts here. Join our inclusive community and connect with like-minded individuals.
+        </p>
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-12">
+        <h2>
+          Find Your Perfect Match
+        </h2>
+        <p>
+          At Giggle Dates, we believe that everyone deserves to find love and happiness. Our community is built on trust, respect, and inclusivity. Whether you're looking for a soulmate or new friends, Giggle Dates is the place to start your journey.
+        </p>
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-12">
+        <h2>
+          Real Connections, Real People
+        </h2>
+        <p>
+          Our members are genuine people looking for meaningful connections. We provide a safe and welcoming environment where you can be yourself and meet others who share your values and interests.
+        </p>
+      </div>
+    </div>
+
+    {% if not user.is_authenticated %}
+      <div class="row my-5 text-center">
+        <div class="col-12">
+          <h2>
+            Start Your Journey Today!
+          </h2>
+          <p>
+            Sign up now and take the first step towards finding love and companionship. It's free and only takes a few minutes to create your profile.
+          </p>
+          <a href="{% url 'account_signup' %}"
+             class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
+    {% endif %}
   </div>
-</div>
-<div class="emotional-appeal hero">
-  <h2>Find Your Perfect Match</h2>
-  <p>At Giggle Dates, we believe that everyone deserves to find love and happiness. <br>Our community is built on trust, respect, and inclusivity. Whether you're looking for a soulmate or new friends, <br>Giggle Dates is the place to start your journey.</p>
-  
-  <h2>Real Connections, Real People</h2>
-  <p>Our members are genuine people looking for meaningful connections. We provide a safe and welcoming environment <br>where you can be yourself and meet others who share your values and interests.</p>
-  
-</div>
-
-
-{% if not user.is_authenticated %}
-<div class="call-to-action hero">
-  <h2>Start Your Journey Today!</h2>
-  <p>Sign up now and take the first step towards finding love and companionship. <br>It's free and only takes a few minutes to create your profile.</p>
-  <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a>
-</div>
-{% endif %}
 {% endblock content %}

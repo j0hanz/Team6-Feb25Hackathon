@@ -85,13 +85,13 @@
           </select>
         </div>
       </div>
-      <div class="text-center">
+      <div class="d-flex justify-content-between">
         <button type="submit"
-                class="btn btn-primary">
+                class="btn button-animation">
           <i class="fas fa-search"></i> Search
         </button>
         <a href="{% url 'auto_match_profiles' %}"
-           class="btn btn-secondary">
+           class="btn button-animation">
           <i class="fas fa-magic"></i> Auto Match
         </a>
       </div>
@@ -104,15 +104,18 @@
         {% for profile in profiles %}
           <div class="col-md-4">
             <div class="mb-4">
-              <img src="{{ profile.profile_picture.url }}"
-                   class="card-img-top img-fluid"
-                   alt="{{ profile.username }}"
-                   height="200"
-                   width="200" />
-              <div class="card-body">
-                <h5 class="card-title">
+              <div class="profile-card">
+                <img src="{{ profile.profile_picture.url|default:'path/to/placeholder.jpg' }}"
+                     class="card-img-top img-fluid rounded mb-1"
+                     alt="{{ profile.username }}"
+                     height="200"
+                     width="200"
+                     title="{{ profile.username }}" />
+                <div class="username-overlay">
                   {{ profile.username }}
-                </h5>
+                </div>
+              </div>
+              <div class="card-body">
                 <div class="card-text my-2">
                   <i class="fas fa-birthday-cake"></i> Age: {{ profile.age }}
                   <br />
@@ -121,7 +124,7 @@
                   <i class="fas fa-heart"></i> Interests: {{ profile.interests }}
                 </div>
                 <a href="{% url 'user_profile' profile.id %}"
-                   class="btn btn-primary mt-2 w-100">
+                   class="btn button-animation mt-2 w-100">
                   <i class="fas fa-info-circle"></i> Read more
                 </a>
               </div>

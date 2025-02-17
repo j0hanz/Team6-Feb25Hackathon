@@ -158,7 +158,7 @@ This site was created with the following colours from the colour palette.
   <img src="docs\wireframes\contrast-check-light.png">
 
 ### Logo
-![logo](static\images\logo.webp)<br>
+<img src="static\images\logo.webp"><br>
 
 [Back to top](#top)
 

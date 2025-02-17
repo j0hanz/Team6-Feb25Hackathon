@@ -7,6 +7,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 class UserProfile(AbstractUser):
+    """Model representing a user profile."""
+
     GENDER_CHOICES = [
         ('M', 'Male'),
         ('F', 'Female'),
@@ -73,20 +75,25 @@ class UserProfile(AbstractUser):
         verbose_name_plural = _('User Profiles')
 
     def __str__(self) -> str:
+        """Return the username of the user profile."""
         return self.username
 
 
 class ProfileImage(models.Model):
+    """Model representing a profile image."""
+
     user = models.ForeignKey(
         UserProfile, on_delete=models.CASCADE, related_name='gallery_images'
     )
     image = CloudinaryField('image')
 
     def __str__(self):
+        """Return a string representation of the profile image."""
         return f"{self.user.username}'s image"
 
 
 @receiver(post_save, sender=UserProfile)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
+    """Create or update the user profile."""
     if created:
         pass

@@ -5,6 +5,8 @@ from .models import ProfileImage, UserProfile
 
 
 class UserProfileCreationForm(UserCreationForm):
+    """Form for creating a new user profile."""
+
     class Meta:
         model = UserProfile
         fields = (
@@ -22,6 +24,8 @@ class UserProfileCreationForm(UserCreationForm):
 
 
 class UserProfileChangeForm(UserChangeForm):
+    """Form for updating an existing user profile."""
+
     class Meta:
         model = UserProfile
         fields = (
@@ -46,11 +50,14 @@ class UserProfileChangeForm(UserChangeForm):
         }
 
     def __init__(self, *args, **kwargs):
+        """Initialize the form and remove the password field."""
         super().__init__(*args, **kwargs)
         self.fields.pop('password')
 
 
 class ProfileImageForm(forms.ModelForm):
+    """Form for uploading a profile image."""
+
     class Meta:
         model = ProfileImage
         fields = ['image']

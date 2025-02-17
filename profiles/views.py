@@ -6,6 +6,7 @@ from .models import ProfileImage
 
 
 def profile_page(request):
+    """Render and process the profile page form."""
     if request.method == 'POST':
         form = UserProfileChangeForm(
             request.POST, request.FILES, instance=request.user
@@ -24,6 +25,7 @@ def profile_page(request):
 
 
 def gallery_page(request):
+    """Render and process the gallery page form."""
     if request.method == 'POST':
         if 'delete_image' in request.POST:
             image_id = request.POST.get('image_id')
@@ -52,4 +54,5 @@ def gallery_page(request):
 
 
 def profile_page_view(request):
+    """Render the profile page view."""
     return render(request, 'profiles/profile-page.html')

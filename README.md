@@ -1,11 +1,10 @@
 # Team 6 - [Giggle Dates](https://team6-feb25hackathon-f88a0e757625.herokuapp.com/) - Feb25Hackathon
 # Code Institute "February 2025 - Love.exe!" <a id="top"/>
 
-<img src="static/images/responsive-design.png"><br>
+<img src="docs\wireframes\site-responsive.png"><br>
 
 ## Introduction
 The present website was done as part of the February Hackathon organised by Code Institute (CI) in 2025.<br>
-The i
 
 ## Table of Contents
 - [User Experience Design](#user-experience-design)
@@ -19,11 +18,14 @@ The i
     - [Logo](#logo)
     - [Typography](#typography)
 - [Website Features](#website-features)
+    - [Common Features](#common-featureslinks-to-most-pages)
     - [Homepage](#homepage)
     - [About](#about)
     - [Register](#register)
     - [Login](#login)
+    - [Signup](#signup)
     - [Profile](#profile)
+    - [Match](#match)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
@@ -118,7 +120,7 @@ Quote: "I want to find someone who appreciates my creativity and supports my art
 ## Project Plan
 Initially the group got together when the team was known after the first webinar. A repository was created and colaborators were adeed to allow different members to create their branches and work locally, as necessary.<br>
 After this, a project board was also created on GitHub, different issues were created, according to different things that needed to be done on the website.<br> 
-Tough initially, everyone looked excited with the project, on the second day, 2 members had to leave the project, and the project ended up with just 2 members, were one was the manager and doing the background and the other was more in the frontend and learning from a senior coder, plus heping as possible with pull requests.<br>
+Different issues were picked by diferent members of the group. We did our best to communicate and keep the project going and learn along the way.<br>
 
 ### User Stories
 All user stories were logged on the [GitHub Project Board](https://github.com/users/j0hanz/projects/8) on GitHub repo, along with the assessment criteria and expected performance for the Hackatho<br>
@@ -199,6 +201,11 @@ For the Logo, font-family used was: "Brush Script MT", cursive. Example of "Brus
 ### Signup
 - https://team6-feb25hackathon-f88a0e757625.herokuapp.com/accounts/signup/
 
+### Profile
+- https://team6-feb25hackathon-f88a0e757625.herokuapp.com/profiles/
+
+### Match
+- https://team6-feb25hackathon-f88a0e757625.herokuapp.com/match/
 
 
 [Back to top](#top)
@@ -248,6 +255,7 @@ Heroku deployment process:
 - This project uses Heroku, a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 Deployment steps are as follows, after account setup:
+<details>
 - Select New in the top-right corner of your Heroku Dashboard, and select Create new app from the dropdown menu.
 - Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select Create App.
 - From the new app Settings, click Reveal Config Vars, and set your environment variables.
@@ -288,6 +296,7 @@ Deployment steps are as follows, after account setup:
   - After performing the standard Git add, commit, and push to GitHub, you can now type:
     - git push heroku main
 - The project should now be connected and deployed to Heroku!
+</details>
 
 [Back to top](#top)
 
@@ -341,14 +350,13 @@ Copilot was used on the creation of code for different languages, to review the 
 AI - Copilot extension for VS-Code was used to understand code used and also to correct it after testing and checking if all changes were working well.
 
 ### Acknowledgements
-This was a stressfull period/hackathon, due to the team staring with 6-7 members and finishing with 2 members.
-The team manager kept the team going and tried to contact different elements of the team to check if they were still interested in helping.
-We had some merge conflicts that were promptly resolved by the team manager who was kind and patient enough to teach an aspiring junior developer and to show how to do different things.
+This was a stressfull period/hackathon, due to the team staring with 6-7 members and finishing with 2 members.<br>
+The team manager kept the team going and tried to contact different elements of the team to check if they were still interested in helping.<br>
+We had some merge conflicts that were promptly resolved by the team manager who was kind and patient enough to teach an aspiring junior developer and to show how to do different things.<br>
 The result it's not as we wished, but overall, we are happy with the result achieved with the small team that was left.
 
 ### Group Members
 https://github.com/j0hanz
-https://github.com/Russlyman
 https://github.com/Carlos-n21
 
 [Back to top](#top)

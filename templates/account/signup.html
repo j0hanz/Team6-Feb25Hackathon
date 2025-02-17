@@ -13,11 +13,13 @@
         <form class="signup"
               id="signup_form"
               method="post"
-              action="{% url 'account_signup' %}">
+              action="{% url 'account_signup' %}"
+              aria-label="Signup Form">
           {% csrf_token %}
           {{ form.non_field_errors }}
           <div class="form-group my-3">
             <label for="id_username">
+              <!-- Username Field -->
               {{ form.username.label }}
             </label>
             {{ form.username }}
@@ -25,6 +27,7 @@
           </div>
           <div class="form-group my-3">
             <label for="id_password1">
+              <!-- Password Field -->
               {{ form.password1.label }}
             </label>
             {{ form.password1 }}
@@ -32,6 +35,7 @@
           </div>
           <div class="form-group mb-3">
             <label for="id_password2">
+              <!-- Confirm Password Field -->
               {{ form.password2.label }}
             </label>
             {{ form.password2 }}

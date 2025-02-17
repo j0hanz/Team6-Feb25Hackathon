@@ -4,10 +4,12 @@ from profiles.models import UserProfile
 
 
 def hello_world(request):
+    """Render the home page."""
     return render(request, 'home/home.html')
 
 
 def match_profiles(request):
+    """Match profiles based on user input."""
     gender = request.GET.get('gender')
     sexual_orientation = request.GET.get('sexual_orientation')
     age_range = request.GET.get('age_range')
@@ -30,6 +32,7 @@ def match_profiles(request):
 
 
 def auto_match_profiles(request):
+    """Automatically match profiles based on user preferences."""
     user = request.user
     profiles = UserProfile.objects.none()
 
@@ -46,5 +49,6 @@ def auto_match_profiles(request):
 
 
 def user_profile(request, user_id):
+    """Render the user profile page."""
     profile = get_object_or_404(UserProfile, id=user_id)
     return render(request, 'home/user-profile.html', {'profile': profile})

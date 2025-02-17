@@ -20,7 +20,8 @@
           </div>
         {% endif %}
         <form method="post"
-              enctype="multipart/form-data">
+              enctype="multipart/form-data"
+              aria-label="Profile Form">
           {% csrf_token %}
           {% for field in form %}
             <div class="mb-3 form-group">
@@ -28,6 +29,7 @@
                      class="form-label d-block">
                 {{ field.label }}
               </label>
+              <!-- Profile Form Field -->
               {{ field }}
               {% if field.errors %}
                 <div class="alert alert-danger">
@@ -46,6 +48,7 @@
           </div>
         </form>
         <div class="text-center mt-4">
+          <!-- Change Password Button -->
           <a href="{% url 'password_change' %}"
              class="btn btn-warning">
             <i class="fas fa-key"></i> Change Password

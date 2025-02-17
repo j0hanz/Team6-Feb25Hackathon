@@ -12,10 +12,12 @@
           <i class="fas fa-images"></i> Gallery
         </h1>
         <form method="post"
-              enctype="multipart/form-data">
+              enctype="multipart/form-data"
+              aria-label="Gallery Form">
           {% csrf_token %}
           {{ form.non_field_errors }}
           <div class="form-group my-3">
+            <!-- Image Upload Field -->
             {{ form.image }}
             {{ form.image.errors }}
           </div>
@@ -30,13 +32,15 @@
         <div class="row">
           {% for image in images %}
             <div class="col-md-4 mb-4">
+              <!-- Display Uploaded Image -->
               <img src="{{ image.image.url }}"
                    class="img-fluid rounded"
                    alt="Gallery Image"
                    width="300"
                    height="200" />
               <form method="post"
-                    class="mt-2">
+                    class="mt-2"
+                    aria-label="Delete Image Form">
                 {% csrf_token %}
                 <input type="hidden"
                        name="image_id"

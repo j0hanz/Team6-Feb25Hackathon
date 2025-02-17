@@ -1,8 +1,7 @@
-# Team5-Feb25Hackathon
+# Team 6 - [Giggle Dates](https://team6-feb25hackathon-f88a0e757625.herokuapp.com/) - Feb25Hackathon
 # Code Institute "February 2025 - Love.exe!" <a id="top"/>
 
 <img src="static/images/responsive-design.png"><br>
-[]()
 
 ## Introduction
 The present website was done as part of the February Hackathon organised by Code Institute (CI) in 2025.<br>
@@ -162,19 +161,15 @@ This site was created with the following colours from the colour palette.
 [Back to top](#top)
 
 ### Typography
-For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)<br>
-<img src="">
+For the body section of the webpage, font-family used was: "Preconcept".
+[Google Fonts](https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Times+New+Roman:wght@400&family=Arial:wght@400&family=Lexend+Deca:wght@400&display=swap)<br>
 
 For the Logo, font-family used was: "Brush Script MT", cursive. Example of "Brush Script MT" font from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/brush-script-mt)
-<img src="">
 
-For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif. Style example of "Segoe UI" from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/segoe-ui) 
-<img src="">
 
 [Back to top](#top)
 
 ## Website Features
-
 ### Common Features/Links to most pages
 - Navbar
 <img src="docs\wireframes\navbar.png">
@@ -340,13 +335,16 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
 ## Credits
 ### Use of AI
 #### Code Generation
-The GitHub 
+Copilot was used on the creation of code for different languages, to review the code and get suggestions of code to help update or enhance features of the site.
 
 #### Debugging
-Copilot 
+AI - Copilot extension for VS-Code was used to understand code used and also to correct it after testing and checking if all changes were working well.
 
 ### Acknowledgements
-The team 
+This was a stressfull period/hackathon, due to the team staring with 6-7 members and finishing with 2 members.
+The team manager kept the team going and tried to contact different elements of the team to check if they were still interested in helping.
+We had some merge conflicts that were promptly resolved by the team manager who was kind and patient enough to teach an aspiring junior developer and to show how to do different things.
+The result it's not as we wished, but overall, we are happy with the result achieved with the small team that was left.
 
 ### Group Members
 https://github.com/j0hanz

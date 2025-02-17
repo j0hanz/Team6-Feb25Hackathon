@@ -39,7 +39,7 @@ The present website was done as part of the February Hackathon organised by Code
 [Back to top](#top)
 
 ## User Experience Design
-The user experience for this site was optimized with the use of Bootstrap, CSS and React.<br>
+The user experience for this site was optimized with the use of Bootstrap and CSS.<br>
 The website provides a smooth experience for the user with the background colour and text colour showing an overall great contrast.<br>
 There is the option to use the default colour scheme that is also the light mode and to use a dark version of the website.
 Users with difficulty to read the words, can use the dyslexia mode.
@@ -123,9 +123,9 @@ After this, a project board was also created on GitHub, different issues were cr
 Different issues were picked by diferent members of the group. We did our best to communicate and keep the project going and learn along the way.<br>
 
 ### User Stories
-All user stories were logged on the [GitHub Project Board](https://github.com/users/j0hanz/projects/8) on GitHub repo, along with the assessment criteria and expected performance for the Hackatho<br>
+All user stories were logged on the [GitHub Project Board](https://github.com/users/j0hanz/projects/8) on GitHub repository.<br>
 There were also prioritised as must-have, should-have and could-have.<br>
-As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline.<br>
+As well as using the Project Board to track progress on our project.<br>
 
 
 [Back to top](#top)
@@ -148,11 +148,12 @@ This site was created with the following colours from the colour palette.
 
 - Colour Palette <br>
   Done using [colorkit.co](https://colorkit.co/color-palette-generator/)<br>
-
+  
   <img src="docs\wireframes\colorkit-dark+light-mode.png">
 
 - Contrast check <br>
   Contrast was checked using [WebAIM](https://webaim.org/resources/contrastchecker/)<br>
+  Though we have a fail on the normal text, as much as we could check, the large text was used on the site, which has a pass.
   
   <img src="docs\wireframes\contrast-check-dark.png">
   <img src="docs\wireframes\contrast-check-light.png">
@@ -217,7 +218,7 @@ Other fonts available for the user are:
 
 ## Responsive Design
 Responsive design was achieved with the use of CSS and Bootstrap to optimize the display of the content in different screen sizes.
-The most important for the team during this project were mobile screens and desktop screens
+The most important for the team during this project were mobile screens and desktop screens.
 
 ## Future Features
 - Ability for users to send messages to each other

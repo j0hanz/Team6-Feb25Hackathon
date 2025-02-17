@@ -6,13 +6,13 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="card p-4">
+        <div class="p-4">
           <div class="card-body">
             <h3 class="mb-4 text-center">
-              {% trans "Sign Out" %}
+              <i class="fas fa-sign-out-alt"></i> {% trans "Sign Out" %}
             </h3>
             <p class="text-center">
-              {% trans "Are you sure you want to sign out?" %}
+              <i class="fas fa-question-circle"></i> {% trans "Are you sure you want to sign out?" %}
             </p>
             <form method="post"
                   action="{% url 'account_logout' %}">
@@ -21,9 +21,9 @@
                 <input name="{{ redirect_field_name }}"
                        value="{{ redirect_field_value }}" />
               {% endif %}
-              <button class="btn btn-primary w-100"
+              <button class="btn btn-warning w-100"
                       type="submit">
-                {% trans "Sign Out" %}
+                <i class="fas fa-sign-out-alt"></i> {% trans "Sign Out" %}
               </button>
             </form>
           </div>

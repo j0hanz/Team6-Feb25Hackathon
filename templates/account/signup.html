@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
       <div class="text-center">
         <h3 class="mb-4 text-center">
-          {% trans "Sign Up" %}
+          <i class="fas fa-user-plus"></i> {% trans "Sign Up" %}
         </h3>
         <form class="signup"
               id="signup_form"
@@ -17,19 +17,28 @@
           {% csrf_token %}
           {{ form.non_field_errors }}
           <div class="form-group my-3">
+            <label for="id_username">
+              {{ form.username.label }}
+            </label>
             {{ form.username }}
             {{ form.username.errors }}
           </div>
           <div class="form-group my-3">
+            <label for="id_password1">
+              {{ form.password1.label }}
+            </label>
             {{ form.password1 }}
             {{ form.password1.errors }}
           </div>
           <div class="form-group mb-3">
+            <label for="id_password2">
+              {{ form.password2.label }}
+            </label>
             {{ form.password2 }}
             {{ form.password2.errors }}
             <small id="id_password_helptext"
                    class="form-text text-muted d-block my-3">
-              {% trans "Password must contain at least 8 characters." %}
+              <i class="fas fa-info-circle"></i> {% trans "Password must contain at least 8 characters." %}
             </small>
           </div>
           {% if redirect_field_value %}
@@ -39,13 +48,13 @@
           {% endif %}
           <button class="btn button-animation mt-5"
                   type="submit">
-            {% trans "Sign Up" %} »
+            <i class="fas fa-user-plus"></i> {% trans "Sign Up" %} »
           </button>
         </form>
         <p class="mt-4 text-center">
           {% blocktrans %}Already have an account?{% endblocktrans %}
           <a href="{% url 'account_login' %}"
-             class="d-block mt-2">{% trans "Sign in here" %}</a>
+             class="d-block mt-2"><i class="fas fa-sign-in-alt"></i> {% trans "Sign in here" %}</a>
         </p>
       </div>
     </div>

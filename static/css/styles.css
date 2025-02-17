@@ -43,6 +43,12 @@ select {
   color: var(--color-dark) !important;
 }
 
+input, textarea, select {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 6.5px;
+}
+
 body.default {
   font-family: "Inter", sans-serif;
 }
@@ -200,6 +206,12 @@ body.dark .footer .footer-link {
 .profile-card {
   position: relative;
   display: inline-block;
+}
+
+.form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 .username-overlay {

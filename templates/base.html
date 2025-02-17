@@ -54,9 +54,15 @@
                {% endif %}"
         style="font-family:
                {% if user.is_authenticated %}
-                 {{ user.font_family }}
+                 {% if user.font_family == 'serif' %}
+                   'Merriweather', serif
+                 {% elif user.font_family == 'Roboto' %}
+                   'Roboto', sans-serif
+                 {% elif user.font_family == 'Lexend' %}
+                   'Lexend Deca', sans-serif
+                 {% endif %}
                {% else %}
-                 'Inter', sans-serif
+                 'Roboto', sans-serif
                {% endif %}">
     <header>
       <!-- Navbar -->

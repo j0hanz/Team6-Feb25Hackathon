@@ -168,6 +168,11 @@ For the body section of the webpage, font-family used was: "Preconcept".
 
 For the Logo, font-family used was: "Brush Script MT", cursive. Example of "Brush Script MT" font from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/brush-script-mt)
 
+Other fonts available for the user are:
+[Merriweather](https://fonts.google.com/specimen/Merriweather)<br>
+[Roboto](https://fonts.google.com/specimen/Roboto)<br>
+[Lexend](https://fonts.google.com/specimen/Lexend)<br>
+
 
 [Back to top](#top)
 
@@ -344,7 +349,8 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
 ## Credits
 ### Use of AI
 #### Code Generation
-Copilot was used on the creation of code for different languages, to review the code and get suggestions of code to help update or enhance features of the site.
+Copilot was used on the creation of code for different languages, to review the code and get suggestions of code to help update or enhance features of the site.<br>
+Another way that AI was used on this site, was to generate images for many of the users of the site, using [DeepAI](https://deepai.org/) for this and different prompts to get the best images without showing extra arms or other strange artifacts on the images.
 
 #### Debugging
 AI - Copilot extension for VS-Code was used to understand code used and also to correct it after testing and checking if all changes were working well.

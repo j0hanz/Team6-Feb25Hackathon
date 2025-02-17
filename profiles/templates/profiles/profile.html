@@ -23,7 +23,7 @@
               enctype="multipart/form-data">
           {% csrf_token %}
           {% for field in form %}
-            <div class="mb-3">
+            <div class="mb-3 form-group">
               <label for="{{ field.id_for_label }}"
                      class="form-label d-block">
                 {{ field.label }}
@@ -45,6 +45,12 @@
             </button>
           </div>
         </form>
+        <div class="text-center mt-4">
+          <a href="{% url 'password_change' %}"
+             class="btn btn-outline-secondary">
+            <i class="fas fa-key"></i> Change Password
+          </a>
+        </div>
       </div>
     </div>
   </div>

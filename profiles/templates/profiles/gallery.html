@@ -17,6 +17,7 @@
           {% csrf_token %}
           {{ form.non_field_errors }}
           <div class="form-group my-3">
+            <!-- Image Upload Field -->
             {{ form.image }}
             {{ form.image.errors }}
           </div>
@@ -31,6 +32,7 @@
         <div class="row">
           {% for image in images %}
             <div class="col-md-4 mb-4">
+              <!-- Display Uploaded Image -->
               <img src="{{ image.image.url }}"
                    class="img-fluid rounded"
                    alt="Gallery Image"

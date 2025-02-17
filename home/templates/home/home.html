@@ -10,6 +10,7 @@
   <div class="container my-5">
     <div class="row align-items-center">
       <div class="col-md-6 text-center">
+        <!-- Logo Image -->
         <img class="img-fluid"
              src="{% static 'images/logo.webp' %}"
              alt="Logo"
@@ -28,6 +29,7 @@
     </div>
     <div class="row my-5">
       <div class="col-12">
+        <!-- Section: Find Your Perfect Match -->
         <h2>
           <i class="fas fa-search"></i> Find Your Perfect Match
         </h2>
@@ -38,6 +40,7 @@
     </div>
     <div class="row my-5">
       <div class="col-12">
+        <!-- Section: Real Connections, Real People -->
         <h2>
           <i class="fas fa-users"></i> Real Connections, Real People
         </h2>
@@ -46,6 +49,7 @@
         </p>
       </div>
     </div>
+    <!-- Sign Up Call to Action for Unauthenticated Users -->
     {% if not user.is_authenticated %}
       <div class="row my-5 text-center">
         <div class="col-12">

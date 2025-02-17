@@ -351,12 +351,12 @@ AI - Copilot extension for VS-Code was used to understand code used and also to 
 
 ### Acknowledgements
 This was a stressfull period/hackathon, due to the team staring with 6-7 members and finishing with 2 members.<br>
-The team manager kept the team going and tried to contact different elements of the team to check if they were still interested in helping.<br>
+The team manager kept the team going and was a guide to check how the project was evolving and also to remind of the most important things to do, and the enhancements that could be done at a later stage.<br>
 We had some merge conflicts that were promptly resolved by the team manager who was kind and patient enough to teach an aspiring junior developer and to show how to do different things.<br>
 The result it's not as we wished, but overall, we are happy with the result achieved with the small team that was left.
 
 ### Group Members
-https://github.com/j0hanz
+https://github.com/j0hanz<br>
 https://github.com/Carlos-n21
 
 [Back to top](#top)

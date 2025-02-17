@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
       <div class="text-center">
         <h3 class="mb-4 text-center">
-          {% trans "Sign In" %}
+          <i class="fas fa-sign-in-alt"></i> {% trans "Sign In" %}
         </h3>
         <form class="login"
               method="post"
@@ -24,7 +24,7 @@
             {{ form.password.errors }}
             <small id="id_password_helptext"
                    class="form-text text-muted d-block my-3">
-              {% trans "Your password must contain at least 8 characters." %}
+              <i class="fas fa-info-circle"></i> {% trans "Your password must contain at least 8 characters." %}
             </small>
           </div>
           {% if redirect_field_value %}
@@ -34,13 +34,13 @@
           {% endif %}
           <button class="btn button-animation mt-5"
                   type="submit">
-            {% trans "Sign In" %}
+            <i class="fas fa-sign-in-alt"></i> {% trans "Sign In" %}
           </button>
         </form>
         <p class="mt-4 text-center">
           {% blocktrans %}Don't have an account?{% endblocktrans %}
           <a href="{% url 'account_signup' %}"
-             class="d-block mt-2">{% trans "Sign up here" %}</a>
+             class="d-block mt-2"><i class="fas fa-user-plus"></i> {% trans "Sign up here" %}</a>
         </p>
       </div>
     </div>

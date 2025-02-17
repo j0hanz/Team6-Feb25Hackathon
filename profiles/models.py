@@ -31,10 +31,9 @@ class UserProfile(AbstractUser):
     ]
 
     FONT_FAMILY_CHOICES = [
-        ('default', 'Default'),
-        ('serif', 'Serif'),
-        ('sans-serif', 'Sans-serif'),
-        ('dyslexie', 'Dyslexie'),
+        ('serif', 'Merriweather'),
+        ('Roboto', 'Roboto'),
+        ('Lexend', 'Lexend'),
     ]
 
     AGE_RANGE_CHOICES = [
@@ -66,7 +65,7 @@ class UserProfile(AbstractUser):
         max_length=5, choices=THEME_CHOICES, default='light'
     )
     font_family = models.CharField(
-        max_length=10, choices=FONT_FAMILY_CHOICES, default='default'
+        max_length=10, choices=FONT_FAMILY_CHOICES, default='Roboto'
     )
 
     class Meta:

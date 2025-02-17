@@ -43,19 +43,23 @@ select {
   color: var(--color-dark) !important;
 }
 
-body.default {
-  font-family: "Inter", sans-serif;
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 6.5px;
 }
 
 body.serif {
   font-family: "Merriweather", serif;
 }
 
-body.sans-serif {
+body.Roboto {
   font-family: "Roboto", sans-serif;
 }
 
-body.dyslexie {
+body.Lexend {
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -200,6 +204,12 @@ body.dark .footer .footer-link {
 .profile-card {
   position: relative;
   display: inline-block;
+}
+
+.form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 .username-overlay {

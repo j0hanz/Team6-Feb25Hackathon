@@ -45,6 +45,10 @@ class UserProfileChangeForm(UserChangeForm):
             'font_family': forms.Select(attrs={'id': 'font-family-selector'}),
         }
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields.pop('password')
+
 
 class ProfileImageForm(forms.ModelForm):
     class Meta:

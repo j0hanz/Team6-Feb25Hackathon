@@ -13,7 +13,8 @@
         <form class="signup"
               id="signup_form"
               method="post"
-              action="{% url 'account_signup' %}">
+              action="{% url 'account_signup' %}"
+              aria-label="Signup Form">
           {% csrf_token %}
           {{ form.non_field_errors }}
           <div class="form-group my-3">

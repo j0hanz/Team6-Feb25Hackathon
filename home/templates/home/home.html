@@ -14,7 +14,8 @@
              src="{% static 'images/logo.webp' %}"
              alt="Logo"
              width="300"
-             height="300" />
+             height="300"
+             aria-label="Giggle Dates Logo" />
       </div>
       <div class="col-md-6">
         <h1>
@@ -55,7 +56,8 @@
             Sign up now and take the first step towards finding love and companionship. It's free and only takes a few minutes to create your profile.
           </p>
           <a href="{% url 'account_signup' %}"
-             class="btn button-animation">
+             class="btn button-animation"
+             aria-label="Sign Up Button">
             <i class="fas fa-user-plus"></i> Sign Up
           </a>
         </div>

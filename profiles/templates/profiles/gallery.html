@@ -12,7 +12,8 @@
           <i class="fas fa-images"></i> Gallery
         </h1>
         <form method="post"
-              enctype="multipart/form-data">
+              enctype="multipart/form-data"
+              aria-label="Gallery Form">
           {% csrf_token %}
           {{ form.non_field_errors }}
           <div class="form-group my-3">
@@ -36,7 +37,8 @@
                    width="300"
                    height="200" />
               <form method="post"
-                    class="mt-2">
+                    class="mt-2"
+                    aria-label="Delete Image Form">
                 {% csrf_token %}
                 <input type="hidden"
                        name="image_id"

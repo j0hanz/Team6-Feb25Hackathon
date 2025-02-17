@@ -20,7 +20,8 @@
           </div>
         {% endif %}
         <form method="post"
-              enctype="multipart/form-data">
+              enctype="multipart/form-data"
+              aria-label="Profile Form">
           {% csrf_token %}
           {% for field in form %}
             <div class="mb-3 form-group">
